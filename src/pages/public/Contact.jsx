@@ -71,7 +71,7 @@ export default function Contact() {
             <div className="mt-12 p-8 bg-slate-900 rounded-2xl text-white">
               <p className="text-yellow-400 font-bold text-lg mb-2">🕐 Disponibilité</p>
               <p className="text-slate-400">Lundi – Vendredi : 08h00 – 18h00</p>
-              <p className="text-slate-400">Samedi : 09h00 – 14h00</p>
+              <p className="text-slate-400">Dimanche : 09h00 – 14h00</p>
             </div>
           </div>
 
