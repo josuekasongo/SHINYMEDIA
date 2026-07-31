@@ -2,8 +2,6 @@ import { Play, ArrowRight, Video, Target, Lightbulb, CheckCircle2, Share2 } from
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Logo from '../../components/Logo';
-import PartnersTicker from '../../components/PartnersTicker';
-import TestimonialsCarousel from '../../components/TestimonialsCarousel';
 
 export default function Home() {
   const { t } = useTranslation();
@@ -148,12 +146,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Partenaires */}
-      <PartnersTicker />
-
-      {/* Testimonials */}
-      <TestimonialsCarousel />
 
       {/* CTA Section */}
       <section className="py-24 relative overflow-hidden bg-slate-900 border-t-4 border-yellow-500">
