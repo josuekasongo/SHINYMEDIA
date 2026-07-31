@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Send } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, Clock, MessageSquare } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Contact() {
@@ -14,131 +14,179 @@ export default function Contact() {
   };
 
   return (
-    <div className="bg-white">
-      {/* Hero */}
-      <section className="bg-slate-900 text-white py-28 text-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.15)_0%,transparent_70%)]"></div>
+    <div className="bg-slate-50 min-h-screen">
+      {/* 1. Hero Section - Premium Design */}
+      <section className="bg-slate-900 text-white py-32 text-center relative overflow-hidden">
+        {/* Glow Effects */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle,rgba(212,175,55,0.15)_0%,transparent_70%)] rounded-full -z-10 blur-3xl animate-pulse"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.1)_0%,transparent_70%)]"></div>
+        
         <div className="max-w-4xl mx-auto px-6 relative z-10">
-          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase bg-yellow-500/20 text-yellow-400 border border-yellow-500/30 mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase bg-yellow-500/10 text-yellow-500 border border-yellow-500/20 mb-6 animate-fade-in-up">
             Parlons de votre projet
           </span>
-          <h1 className="text-5xl sm:text-6xl font-extrabold mb-6">
-            Nous <span className="text-gradient">Contacter</span>
+          <h1 className="text-5xl sm:text-7xl font-extrabold mb-8 tracking-tight animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+            Contactez-<span className="text-gradient">Nous</span>
           </h1>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
-            Une question, un projet, une idée ? Nous sommes là pour vous accompagner.
+          <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            Une question, un projet, une idée ? Notre équipe est prête à vous écouter et à transformer votre vision en réalité.
           </p>
         </div>
       </section>
 
-      {/* Contact Info + Form */}
-      <section className="py-24">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16">
-          {/* Info */}
-          <div>
-            <h2 className="text-3xl font-extrabold text-slate-900 mb-8">Informations de contact</h2>
+      {/* 2. Contact Info + Form */}
+      <section className="py-24 relative overflow-hidden">
+        {/* Subtle background decor */}
+        <div className="absolute -left-20 top-20 w-72 h-72 bg-yellow-200/20 rounded-full blur-3xl"></div>
+        
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-5 gap-16 relative z-10">
+          
+          {/* Left: Contact Info (Takes 2 cols) */}
+          <div className="lg:col-span-2 space-y-8">
+            <div>
+              <h2 className="text-3xl font-extrabold text-slate-900 mb-4">Informations de <span className="text-gradient">contact</span></h2>
+              <p className="text-slate-500 mb-8">N'hésitez pas à nous joindre directement via nos coordonnées ci-dessous ou en remplissant le formulaire.</p>
+            </div>
+            
             <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-yellow-50 rounded-xl text-yellow-600 mt-1">
-                  <Phone className="h-5 w-5" />
+              {/* Phone */}
+              <div className="flex items-start gap-5 p-6 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-md hover:border-yellow-200 transition-all group">
+                <div className="p-4 bg-slate-50 rounded-2xl text-slate-400 group-hover:bg-yellow-500 group-hover:text-white transition-colors duration-300">
+                  <Phone className="h-6 w-6" />
                 </div>
                 <div>
-                  <p className="font-semibold text-slate-800 mb-1">Téléphone</p>
-                  <p className="text-slate-600">0808 872 935</p>
-                  <p className="text-slate-600">0975 598 860</p>
+                  <p className="font-bold text-slate-900 mb-1">Téléphone</p>
+                  <p className="text-slate-500 font-medium">+243 808 872 935</p>
+                  <p className="text-slate-500 font-medium">+243 975 598 860</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-yellow-50 rounded-xl text-yellow-600 mt-1">
-                  <Mail className="h-5 w-5" />
+
+              {/* Email */}
+              <div className="flex items-start gap-5 p-6 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-md hover:border-yellow-200 transition-all group">
+                <div className="p-4 bg-slate-50 rounded-2xl text-slate-400 group-hover:bg-yellow-500 group-hover:text-white transition-colors duration-300">
+                  <Mail className="h-6 w-6" />
                 </div>
                 <div>
-                  <p className="font-semibold text-slate-800 mb-1">Email</p>
-                  <p className="text-slate-600">shinymedia@gmail.com</p>
+                  <p className="font-bold text-slate-900 mb-1">Email</p>
+                  <a href="mailto:shinymedia@gmail.com" className="text-slate-500 font-medium hover:text-yellow-600 transition-colors">shinymedia@gmail.com</a>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-yellow-50 rounded-xl text-yellow-600 mt-1">
-                  <MapPin className="h-5 w-5" />
+
+              {/* Location */}
+              <div className="flex items-start gap-5 p-6 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-md hover:border-yellow-200 transition-all group">
+                <div className="p-4 bg-slate-50 rounded-2xl text-slate-400 group-hover:bg-yellow-500 group-hover:text-white transition-colors duration-300">
+                  <MapPin className="h-6 w-6" />
                 </div>
                 <div>
-                  <p className="font-semibold text-slate-800 mb-1">Localisation</p>
-                  <p className="text-slate-600">République Démocratique du Congo</p>
+                  <p className="font-bold text-slate-900 mb-1">Localisation</p>
+                  <p className="text-slate-500 font-medium">République Démocratique du Congo</p>
                 </div>
               </div>
             </div>
 
-            <div className="mt-12 p-8 bg-slate-900 rounded-2xl text-white">
-              <p className="text-yellow-400 font-bold text-lg mb-2">🕐 Disponibilité</p>
-              <p className="text-slate-400">Lundi – Vendredi : 08h00 – 18h00</p>
-              <p className="text-slate-400">Dimanche : 09h00 – 14h00</p>
+            {/* Disponibility Banner */}
+            <div className="mt-8 p-8 bg-slate-900 rounded-3xl text-white shadow-xl shadow-slate-900/20 relative overflow-hidden">
+              <div className="absolute -right-10 -bottom-10 w-40 h-40 bg-yellow-500/20 rounded-full blur-2xl"></div>
+              <div className="flex items-center gap-3 mb-6 relative z-10">
+                <Clock className="w-6 h-6 text-yellow-500" />
+                <p className="font-bold text-xl">Disponibilité</p>
+              </div>
+              <div className="space-y-3 relative z-10">
+                <div className="flex justify-between items-center border-b border-slate-800 pb-3">
+                  <span className="text-slate-400">Lundi – Vendredi</span>
+                  <span className="font-semibold text-yellow-500">08h00 – 18h00</span>
+                </div>
+                <div className="flex justify-between items-center pt-1">
+                  <span className="text-slate-400">Dimanche</span>
+                  <span className="font-semibold text-yellow-500">09h00 – 14h00</span>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Form */}
-          <div>
-            <h2 className="text-3xl font-extrabold text-slate-900 mb-8">Envoyez-nous un message</h2>
-            {sent && (
-              <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-xl text-green-700 font-medium">
-                ✅ Votre message a bien été envoyé ! Nous vous répondrons dans les plus brefs délais.
+          {/* Right: Premium Form (Takes 3 cols) */}
+          <div className="lg:col-span-3">
+            <div className="bg-white rounded-[2rem] p-8 sm:p-12 shadow-xl shadow-slate-200/50 border border-slate-100 h-full">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="p-3 bg-yellow-50 rounded-2xl text-yellow-600">
+                  <MessageSquare className="h-8 w-8" />
+                </div>
+                <h2 className="text-3xl font-extrabold text-slate-900">Envoyez-nous un message</h2>
               </div>
-            )}
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="grid sm:grid-cols-2 gap-5">
-                <div>
-                  <label className="block text-sm font-semibold text-slate-700 mb-1.5">Nom complet *</label>
+              
+              {sent && (
+                <div className="mb-8 p-6 bg-green-50 border border-green-200 rounded-2xl text-green-700 font-medium flex items-center gap-3 animate-fade-in-up">
+                  <span className="w-8 h-8 rounded-full bg-green-200 flex items-center justify-center flex-shrink-0 text-green-800 text-xl">✓</span>
+                  Votre message a bien été envoyé ! Nous vous répondrons dans les plus brefs délais.
+                </div>
+              )}
+              
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid sm:grid-cols-2 gap-6">
+                  {/* Name */}
+                  <div className="space-y-2">
+                    <label className="block text-sm font-bold text-slate-700 ml-1">Nom complet *</label>
+                    <input
+                      type="text"
+                      required
+                      value={form.name}
+                      onChange={e => setForm({...form, name: e.target.value})}
+                      className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:bg-white focus:outline-none focus:ring-4 focus:ring-yellow-500/20 focus:border-yellow-500 transition-all text-slate-900 font-medium placeholder-slate-400"
+                      placeholder="Jean Dupont"
+                    />
+                  </div>
+                  {/* Email */}
+                  <div className="space-y-2">
+                    <label className="block text-sm font-bold text-slate-700 ml-1">Adresse Email *</label>
+                    <input
+                      type="email"
+                      required
+                      value={form.email}
+                      onChange={e => setForm({...form, email: e.target.value})}
+                      className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:bg-white focus:outline-none focus:ring-4 focus:ring-yellow-500/20 focus:border-yellow-500 transition-all text-slate-900 font-medium placeholder-slate-400"
+                      placeholder="jean.dupont@email.com"
+                    />
+                  </div>
+                </div>
+                
+                {/* Subject */}
+                <div className="space-y-2">
+                  <label className="block text-sm font-bold text-slate-700 ml-1">Sujet *</label>
                   <input
                     type="text"
                     required
-                    value={form.name}
-                    onChange={e => setForm({...form, name: e.target.value})}
-                    className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition text-slate-800"
-                    placeholder="Votre nom"
+                    value={form.subject}
+                    onChange={e => setForm({...form, subject: e.target.value})}
+                    className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:bg-white focus:outline-none focus:ring-4 focus:ring-yellow-500/20 focus:border-yellow-500 transition-all text-slate-900 font-medium placeholder-slate-400"
+                    placeholder="De quoi souhaitez-vous discuter ?"
                   />
                 </div>
-                <div>
-                  <label className="block text-sm font-semibold text-slate-700 mb-1.5">Email *</label>
-                  <input
-                    type="email"
+                
+                {/* Message */}
+                <div className="space-y-2">
+                  <label className="block text-sm font-bold text-slate-700 ml-1">Votre Message *</label>
+                  <textarea
                     required
-                    value={form.email}
-                    onChange={e => setForm({...form, email: e.target.value})}
-                    className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition text-slate-800"
-                    placeholder="votre@email.com"
+                    rows={6}
+                    value={form.message}
+                    onChange={e => setForm({...form, message: e.target.value})}
+                    className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:bg-white focus:outline-none focus:ring-4 focus:ring-yellow-500/20 focus:border-yellow-500 transition-all text-slate-900 font-medium placeholder-slate-400 resize-none"
+                    placeholder="Décrivez votre projet ou votre demande avec le plus de détails possible..."
                   />
                 </div>
-              </div>
-              <div>
-                <label className="block text-sm font-semibold text-slate-700 mb-1.5">Sujet *</label>
-                <input
-                  type="text"
-                  required
-                  value={form.subject}
-                  onChange={e => setForm({...form, subject: e.target.value})}
-                  className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition text-slate-800"
-                  placeholder="Objet de votre message"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-semibold text-slate-700 mb-1.5">Message *</label>
-                <textarea
-                  required
-                  rows={6}
-                  value={form.message}
-                  onChange={e => setForm({...form, message: e.target.value})}
-                  className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition text-slate-800 resize-none"
-                  placeholder="Décrivez votre projet ou votre demande..."
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full flex items-center justify-center gap-2 py-4 px-8 rounded-xl bg-gradient-to-r from-yellow-500 to-yellow-600 text-white font-bold uppercase tracking-wider hover:shadow-lg hover:shadow-yellow-500/30 hover:-translate-y-0.5 transition-all"
-              >
-                <Send className="h-5 w-5" />
-                Envoyer le message
-              </button>
-            </form>
+                
+                {/* Submit */}
+                <button
+                  type="submit"
+                  className="w-full sm:w-auto mt-4 flex items-center justify-center gap-3 py-5 px-10 rounded-2xl bg-slate-900 text-white font-bold uppercase tracking-widest hover:bg-slate-800 hover:shadow-xl hover:shadow-slate-900/20 hover:-translate-y-1 transition-all"
+                >
+                  <Send className="h-5 w-5 text-yellow-500" />
+                  Envoyer le message
+                </button>
+              </form>
+            </div>
           </div>
+          
         </div>
       </section>
     </div>

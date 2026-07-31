@@ -137,7 +137,7 @@ export default function Home() {
             </Link>
             
             {/* List Card */}
-            <div className="bg-slate-50 rounded-3xl p-10 border border-slate-200 lg:col-span-3 flex flex-col md:flex-row items-center justify-between gap-10">
+            <div className="bg-slate-50 rounded-3xl p-10 border border-slate-200 md:col-span-2 lg:col-span-3 flex flex-col md:flex-row items-center justify-between gap-10">
               <div className="max-w-lg">
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Et bien plus encore...</h3>
                 <p className="text-slate-500">Nous couvrons l'ensemble de vos besoins en communication visuelle et sonore pour une cohérence parfaite de votre marque.</p>
