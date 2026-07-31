@@ -1,14 +1,17 @@
 import { Eye, Target, CheckCircle2, ChevronRight, Award, Zap, HeartHandshake } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-const values = [
-  { name: "Excellence", desc: "Nous visons l'excellence dans chaque production et chaque service que nous offrons.", icon: <Award className="w-6 h-6" /> },
-  { name: "Innovation", desc: "Nous adoptons les technologies modernes pour des solutions créatives et avant-gardistes.", icon: <Zap className="w-6 h-6" /> },
-  { name: "Intégrité", desc: "Nous agissons avec honnêteté et transparence envers nos clients et partenaires.", icon: <HeartHandshake className="w-6 h-6" /> },
-  { name: "Impact social", desc: "Nous croyons au rôle des médias dans le développement et la transformation de la société.", icon: <Target className="w-6 h-6" /> }
-];
+import { useTranslation } from 'react-i18next';
 
 export default function APropos() {
+  const { t } = useTranslation();
+
+  const values = [
+    { name: t('apropos.val1_name', "Excellence"), desc: t('apropos.val1_desc', "Nous visons l'excellence dans chaque production et chaque service que nous offrons."), icon: <Award className="w-6 h-6" /> },
+    { name: t('apropos.val2_name', "Innovation"), desc: t('apropos.val2_desc', "Nous adoptons les technologies modernes pour des solutions créatives et avant-gardistes."), icon: <Zap className="w-6 h-6" /> },
+    { name: t('apropos.val3_name', "Intégrité"), desc: t('apropos.val3_desc', "Nous agissons avec honnêteté et transparence envers nos clients et partenaires."), icon: <HeartHandshake className="w-6 h-6" /> },
+    { name: t('apropos.val4_name', "Impact social"), desc: t('apropos.val4_desc', "Nous croyons au rôle des médias dans le développement et la transformation de la société."), icon: <Target className="w-6 h-6" /> }
+  ];
+
   return (
     <div className="bg-slate-50 min-h-screen">
       {/* 1. Hero Section - Premium Design */}
@@ -19,13 +22,13 @@ export default function APropos() {
         
         <div className="max-w-4xl mx-auto px-6 relative z-10">
           <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase bg-yellow-500/10 text-yellow-500 border border-yellow-500/20 mb-6 animate-fade-in-up">
-            Notre Histoire
+            {t('apropos.hero_badge', "Notre Histoire")}
           </span>
           <h1 className="text-5xl sm:text-7xl font-extrabold mb-8 tracking-tight animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-            À propos de <span className="text-gradient">Nous</span>
+            {t('apropos.hero_title_1', "À propos de")} <span className="text-gradient">{t('apropos.hero_title_2', "Nous")}</span>
           </h1>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Découvrez l'équipe, la vision et la passion qui animent SHINY MÉDIA pour créer des contenus à fort impact.
+            {t('apropos.hero_desc', "Découvrez l'équipe, la vision et la passion qui animent SHINY MÉDIA pour créer des contenus à fort impact.")}
           </p>
         </div>
       </section>
@@ -38,22 +41,22 @@ export default function APropos() {
             <div className="relative">
               <div className="absolute -left-8 -top-8 w-24 h-24 bg-yellow-100 rounded-full blur-2xl opacity-50"></div>
               <h2 className="text-4xl sm:text-5xl font-extrabold text-slate-900 mb-8 relative z-10">
-                L'Agence des <span className="text-gradient">Talents</span>
+                {t('apropos.who_title_1', "L'Agence des")} <span className="text-gradient">{t('apropos.who_title_2', "Talents")}</span>
               </h2>
               <div className="space-y-6 text-lg text-slate-600 leading-relaxed relative z-10">
                 <p>
-                  <strong className="text-slate-900 font-extrabold">SHINY MEDIA</strong> est une agence de communication et de production multimédia dédiée à l'information, à la création de contenus et à la valorisation des talents.
+                  <strong className="text-slate-900 font-extrabold">SHINY MEDIA</strong> {t('apropos.who_p1', "est une agence de communication et de production multimédia dédiée à l'information, à la création de contenus et à la valorisation des talents.")}
                 </p>
                 <p>
-                  Nous mettons notre expertise au service des entreprises, des organisations, des institutions, des artistes et des particuliers afin de produire des contenus innovants, créatifs et à fort impact.
+                  {t('apropos.who_p2', "Nous mettons notre expertise au service des entreprises, des organisations, des institutions, des artistes et des particuliers afin de produire des contenus innovants, créatifs et à fort impact.")}
                 </p>
                 <p>
-                  Animée par une vision d'excellence, notre équipe utilise les technologies modernes pour raconter des histoires, promouvoir les initiatives locales et accompagner ses partenaires dans leur stratégie de communication.
+                  {t('apropos.who_p3', "Animée par une vision d'excellence, notre équipe utilise les technologies modernes pour raconter des histoires, promouvoir les initiatives locales et accompagner ses partenaires dans leur stratégie de communication.")}
                 </p>
               </div>
               
               <Link to="/contact" className="inline-flex items-center gap-2 mt-10 font-bold text-yellow-600 hover:text-yellow-500 transition-colors uppercase tracking-widest text-sm group">
-                Rencontrer notre équipe
+                {t('apropos.who_link', "Rencontrer notre équipe")}
                 <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -68,10 +71,10 @@ export default function APropos() {
                   <div className="p-4 bg-yellow-100 rounded-2xl text-yellow-600">
                     <Eye className="h-8 w-8" />
                   </div>
-                  <h3 className="text-2xl font-bold text-slate-900">Notre Vision</h3>
+                  <h3 className="text-2xl font-bold text-slate-900">{t('apropos.vision_title', "Notre Vision")}</h3>
                 </div>
                 <p className="text-slate-600 leading-relaxed text-lg">
-                  Devenir une référence incontournable en Afrique dans les médias, la communication digitale et la production audiovisuelle, en inspirant le changement à travers des contenus de qualité supérieure.
+                  {t('apropos.vision_desc', "Devenir une référence incontournable en Afrique dans les médias, la communication digitale et la production audiovisuelle, en inspirant le changement à travers des contenus de qualité supérieure.")}
                 </p>
               </div>
               
@@ -81,10 +84,10 @@ export default function APropos() {
                   <div className="p-4 bg-slate-800 rounded-2xl text-yellow-500">
                     <Target className="h-8 w-8" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white">Notre Mission</h3>
+                  <h3 className="text-2xl font-bold text-white">{t('apropos.mission_title', "Notre Mission")}</h3>
                 </div>
                 <p className="text-slate-400 leading-relaxed text-lg">
-                  Informer avec rigueur professionnelle, inspirer par une créativité sans limite et produire des contenus qui génèrent un impact positif et durable sur la société.
+                  {t('apropos.mission_desc', "Informer avec rigueur professionnelle, inspirer par une créativité sans limite et produire des contenus qui génèrent un impact positif et durable sur la société.")}
                 </p>
               </div>
             </div>
@@ -100,9 +103,9 @@ export default function APropos() {
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <span className="text-yellow-600 font-bold tracking-widest uppercase text-sm mb-3 block">L'ADN Shiny</span>
-            <h2 className="text-4xl sm:text-5xl font-extrabold text-slate-900 mb-6">Nos <span className="text-gradient">Valeurs</span></h2>
-            <p className="text-slate-500 text-lg max-w-2xl mx-auto">Ces principes fondamentaux guident chacune de nos actions, façonnent notre culture et garantissent l'excellence de nos services.</p>
+            <span className="text-yellow-600 font-bold tracking-widest uppercase text-sm mb-3 block">{t('apropos.val_badge', "L'ADN Shiny")}</span>
+            <h2 className="text-4xl sm:text-5xl font-extrabold text-slate-900 mb-6">{t('apropos.val_title_1', "Nos")} <span className="text-gradient">{t('apropos.val_title_2', "Valeurs")}</span></h2>
+            <p className="text-slate-500 text-lg max-w-2xl mx-auto">{t('apropos.val_desc', "Ces principes fondamentaux guident chacune de nos actions, façonnent notre culture et garantissent l'excellence de nos services.")}</p>
           </div>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -132,12 +135,12 @@ export default function APropos() {
             </svg>
           </div>
           <blockquote className="text-3xl md:text-4xl font-light text-white leading-tight italic mb-16 max-w-4xl mx-auto">
-            « Chez SHINY MEDIA, nous croyons que chaque image, chaque son et chaque histoire ont le pouvoir de transformer des vies et de bâtir un avenir meilleur. »
+            {t('apropos.quote', "« Chez SHINY MEDIA, nous croyons que chaque image, chaque son et chaque histoire ont le pouvoir de transformer des vies et de bâtir un avenir meilleur. »")}
           </blockquote>
           
           <div className="flex flex-col md:flex-row justify-center items-center gap-8">
             <div className="px-8 py-5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl text-white font-medium hover:bg-white/10 transition-colors">
-              <span className="text-slate-400 block text-sm mb-1 uppercase tracking-widest">Membres fondateurs</span>
+              <span className="text-slate-400 block text-sm mb-1 uppercase tracking-widest">{t('apropos.founders', "Membres fondateurs")}</span>
               <span className="text-xl text-yellow-400 font-bold">SHINY COMPANY</span>
             </div>
             
@@ -145,7 +148,7 @@ export default function APropos() {
             <div className="hidden md:block text-slate-600 font-light text-2xl">+</div>
             
             <div className="px-8 py-5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl text-white font-medium hover:bg-white/10 transition-colors">
-              <span className="text-slate-400 block text-sm mb-1 uppercase tracking-widest">Partenaires officiels</span>
+              <span className="text-slate-400 block text-sm mb-1 uppercase tracking-widest">{t('apropos.partners', "Partenaires officiels")}</span>
               <span className="text-xl text-yellow-400 font-bold">ASDPE-Asbl</span>
             </div>
           </div>

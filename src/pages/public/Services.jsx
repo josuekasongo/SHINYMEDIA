@@ -1,58 +1,61 @@
 import { Video, Camera, Presentation, Share2, PenTool, Target, Mic, BookOpen, MessageSquare, Wand2, Rocket, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-const services = [
-  {
-    name: "Production audiovisuelle",
-    desc: "Vidéos, documentaires, reportages, clips musicaux et publicitaires de haute qualité.",
-    icon: <Video className="h-8 w-8" />,
-    details: ["Tournage & réalisation", "Montage professionnel", "Motion design", "Effets spéciaux"]
-  },
-  {
-    name: "Photographie professionnelle",
-    desc: "Couvertures photo pour tous vos événements, portraits et campagnes visuelles.",
-    icon: <Camera className="h-8 w-8" />,
-    details: ["Portraits & branding", "Événementiel", "Produits & publicité", "Retouche photo"]
-  },
-  {
-    name: "Couverture médiatique",
-    desc: "Présence complète lors de vos événements pour une couverture médiatique professionnelle.",
-    icon: <Presentation className="h-8 w-8" />,
-    details: ["Live reporting", "Conférences & congrès", "Cérémonies & galas", "Événements culturels"]
-  },
-  {
-    name: "Communication digitale",
-    desc: "Gestion de vos réseaux sociaux et stratégie de communication en ligne.",
-    icon: <Share2 className="h-8 w-8" />,
-    details: ["Gestion des réseaux sociaux", "Création de contenu", "Community management", "Stratégie digitale"]
-  },
-  {
-    name: "Identité visuelle",
-    desc: "Design de logos, chartes graphiques et supports de communication visuels.",
-    icon: <PenTool className="h-8 w-8" />,
-    details: ["Logo & charte graphique", "Affiches & flyers", "Infographies", "Supports print & web"]
-  },
-  {
-    name: "Marketing digital",
-    desc: "Campagnes publicitaires ciblées pour maximiser votre visibilité et votre impact.",
-    icon: <Target className="h-8 w-8" />,
-    details: ["Campagnes sponsorisées", "SEO & SEA", "Email marketing", "Analyse & reporting"]
-  },
-  {
-    name: "Podcasts & audio",
-    desc: "Production et diffusion de podcasts et d'émissions audio professionnelles.",
-    icon: <Mic className="h-8 w-8" />,
-    details: ["Enregistrement studio", "Montage audio", "Diffusion multi-plateformes", "Émissions thématiques"]
-  },
-  {
-    name: "Formation & médias",
-    desc: "Formations pratiques pour les jeunes talents dans les métiers des médias.",
-    icon: <BookOpen className="h-8 w-8" />,
-    details: ["Journalisme & rédaction", "Photographie & vidéo", "Communication digitale", "Création de contenu"]
-  }
-];
+import { useTranslation } from 'react-i18next';
 
 export default function Services() {
+  const { t } = useTranslation();
+
+  const services = [
+    {
+      name: t('services.s1_name', "Production audiovisuelle"),
+      desc: t('services.s1_desc', "Vidéos, documentaires, reportages, clips musicaux et publicitaires de haute qualité."),
+      icon: <Video className="h-8 w-8" />,
+      details: [t('services.s1_d1', "Tournage & réalisation"), t('services.s1_d2', "Montage professionnel"), t('services.s1_d3', "Motion design"), t('services.s1_d4', "Effets spéciaux")]
+    },
+    {
+      name: t('services.s2_name', "Photographie professionnelle"),
+      desc: t('services.s2_desc', "Couvertures photo pour tous vos événements, portraits et campagnes visuelles."),
+      icon: <Camera className="h-8 w-8" />,
+      details: [t('services.s2_d1', "Portraits & branding"), t('services.s2_d2', "Événementiel"), t('services.s2_d3', "Produits & publicité"), t('services.s2_d4', "Retouche photo")]
+    },
+    {
+      name: t('services.s3_name', "Couverture médiatique"),
+      desc: t('services.s3_desc', "Présence complète lors de vos événements pour une couverture médiatique professionnelle."),
+      icon: <Presentation className="h-8 w-8" />,
+      details: [t('services.s3_d1', "Live reporting"), t('services.s3_d2', "Conférences & congrès"), t('services.s3_d3', "Cérémonies & galas"), t('services.s3_d4', "Événements culturels")]
+    },
+    {
+      name: t('services.s4_name', "Communication digitale"),
+      desc: t('services.s4_desc', "Gestion de vos réseaux sociaux et stratégie de communication en ligne."),
+      icon: <Share2 className="h-8 w-8" />,
+      details: [t('services.s4_d1', "Gestion des réseaux sociaux"), t('services.s4_d2', "Création de contenu"), t('services.s4_d3', "Community management"), t('services.s4_d4', "Stratégie digitale")]
+    },
+    {
+      name: t('services.s5_name', "Identité visuelle"),
+      desc: t('services.s5_desc', "Design de logos, chartes graphiques et supports de communication visuels."),
+      icon: <PenTool className="h-8 w-8" />,
+      details: [t('services.s5_d1', "Logo & charte graphique"), t('services.s5_d2', "Affiches & flyers"), t('services.s5_d3', "Infographies"), t('services.s5_d4', "Supports print & web")]
+    },
+    {
+      name: t('services.s6_name', "Marketing digital"),
+      desc: t('services.s6_desc', "Campagnes publicitaires ciblées pour maximiser votre visibilité et votre impact."),
+      icon: <Target className="h-8 w-8" />,
+      details: [t('services.s6_d1', "Campagnes sponsorisées"), t('services.s6_d2', "SEO & SEA"), t('services.s6_d3', "Email marketing"), t('services.s6_d4', "Analyse & reporting")]
+    },
+    {
+      name: t('services.s7_name', "Podcasts & audio"),
+      desc: t('services.s7_desc', "Production et diffusion de podcasts et d'émissions audio professionnelles."),
+      icon: <Mic className="h-8 w-8" />,
+      details: [t('services.s7_d1', "Enregistrement studio"), t('services.s7_d2', "Montage audio"), t('services.s7_d3', "Diffusion multi-plateformes"), t('services.s7_d4', "Émissions thématiques")]
+    },
+    {
+      name: t('services.s8_name', "Formation & médias"),
+      desc: t('services.s8_desc', "Formations pratiques pour les jeunes talents dans les métiers des médias."),
+      icon: <BookOpen className="h-8 w-8" />,
+      details: [t('services.s8_d1', "Journalisme & rédaction"), t('services.s8_d2', "Photographie & vidéo"), t('services.s8_d3', "Communication digitale"), t('services.s8_d4', "Création de contenu")]
+    }
+  ];
+
   return (
     <div className="bg-slate-50 min-h-screen">
       {/* 1. Hero Section - Premium Design */}
@@ -63,13 +66,13 @@ export default function Services() {
         
         <div className="max-w-4xl mx-auto px-6 relative z-10">
           <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase bg-yellow-500/10 text-yellow-500 border border-yellow-500/20 mb-6 animate-fade-in-up">
-            Nos expertises
+            {t('services.hero_badge', "Nos expertises")}
           </span>
           <h1 className="text-5xl sm:text-7xl font-extrabold mb-8 tracking-tight animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-            Des solutions pour <span className="text-gradient">inspirer</span>
+            {t('services.hero_title_1', "Des solutions pour")} <span className="text-gradient">{t('services.hero_title_2', "inspirer")}</span>
           </h1>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            De la production audiovisuelle à la communication digitale, nous concevons des stratégies sur mesure pour valoriser votre image et atteindre vos objectifs.
+            {t('services.hero_desc', "De la production audiovisuelle à la communication digitale, nous concevons des stratégies sur mesure pour valoriser votre image et atteindre vos objectifs.")}
           </p>
         </div>
       </section>
@@ -78,8 +81,8 @@ export default function Services() {
       <section className="py-24 bg-white relative">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-extrabold text-slate-900 mb-4">Notre <span className="text-gradient">Méthodologie</span></h2>
-            <p className="text-slate-500 text-lg max-w-2xl mx-auto">Une approche structurée et collaborative pour garantir le succès de votre projet de A à Z.</p>
+            <h2 className="text-4xl font-extrabold text-slate-900 mb-4">{t('services.meth_title_1', "Notre")} <span className="text-gradient">{t('services.meth_title_2', "Méthodologie")}</span></h2>
+            <p className="text-slate-500 text-lg max-w-2xl mx-auto">{t('services.meth_desc', "Une approche structurée et collaborative pour garantir le succès de votre projet de A à Z.")}</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 relative">
@@ -90,8 +93,8 @@ export default function Services() {
               <div className="w-24 h-24 mx-auto bg-slate-50 rounded-full border-4 border-white shadow-xl shadow-slate-200/50 flex items-center justify-center mb-6 text-yellow-500">
                 <MessageSquare className="w-10 h-10" />
               </div>
-              <h3 className="text-xl font-bold text-slate-800 mb-3">1. Écoute & Analyse</h3>
-              <p className="text-slate-500 leading-relaxed">Nous prenons le temps de comprendre vos besoins, votre audience et vos objectifs pour définir la meilleure stratégie.</p>
+              <h3 className="text-xl font-bold text-slate-800 mb-3">{t('services.meth_1_title', "1. Écoute & Analyse")}</h3>
+              <p className="text-slate-500 leading-relaxed">{t('services.meth_1_desc', "Nous prenons le temps de comprendre vos besoins, votre audience et vos objectifs pour définir la meilleure stratégie.")}</p>
             </div>
             
             <div className="relative bg-white z-10 text-center px-6">

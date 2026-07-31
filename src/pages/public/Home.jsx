@@ -51,129 +51,125 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. Features Section - Pourquoi nous choisir */}
-      <section className="py-28 bg-slate-50 border-y border-slate-200 relative overflow-hidden">
-        {/* Decor pattern */}
-        <div className="absolute top-0 right-0 w-64 h-64 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiNlMmU4ZjAiLz48L3N2Zz4=')] opacity-50 mask-image-linear-gradient"></div>
-        
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="text-center mb-20">
-            <span className="text-yellow-600 font-bold tracking-widest uppercase text-sm mb-3 block">L'approche Shiny</span>
-            <h2 className="text-4xl sm:text-5xl font-extrabold text-slate-900">
-              Pourquoi nous <span className="text-gradient">choisir</span> ?
-            </h2>
+      {/* 2. Pourquoi nous choisir */}
+      <section className="py-24 bg-slate-50 relative">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="text-yellow-600 font-bold tracking-widest uppercase text-sm mb-3 block">{t('home.why_us_sub', "L'approche Shiny")}</span>
+            <h2 className="text-4xl sm:text-5xl font-extrabold text-slate-900 mb-6">{t('home.why_us_title_1', "Pourquoi nous")} <span className="text-gradient">{t('home.why_us_title_2', "choisir")}</span>{t('home.why_us_qmark', "?")}</h2>
           </div>
-
-          <div className="grid md:grid-cols-3 gap-10">
-            {/* Feature 1 */}
-            <div className="bg-white p-10 rounded-3xl shadow-sm border border-slate-100 hover:shadow-2xl hover:border-yellow-400 hover:-translate-y-2 transition-all duration-300 group">
-              <div className="w-16 h-16 bg-yellow-50 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-yellow-400 transition-all duration-300">
-                <Target className="w-8 h-8 text-yellow-600 group-hover:text-white transition-colors" />
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all group">
+              <div className="w-14 h-14 bg-yellow-50 rounded-2xl flex items-center justify-center text-yellow-600 mb-6 group-hover:bg-yellow-500 group-hover:text-white transition-colors">
+                <Target className="w-7 h-7" />
               </div>
-              <h3 className="text-2xl font-bold text-slate-800 mb-4">Stratégie sur mesure</h3>
-              <p className="text-slate-500 leading-relaxed">
-                Chaque projet est unique. Nous concevons des stratégies personnalisées pour atteindre vos objectifs avec précision et maximiser votre impact.
-              </p>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">{t('home.feat_1_title', "Stratégie sur mesure")}</h3>
+              <p className="text-slate-500 leading-relaxed">{t('home.feat_1_desc', "Chaque projet est unique. Nous concevons des stratégies personnalisées pour atteindre vos objectifs avec précision et maximiser votre impact.")}</p>
             </div>
-            {/* Feature 2 */}
-            <div className="bg-white p-10 rounded-3xl shadow-sm border border-slate-100 hover:shadow-2xl hover:border-yellow-400 hover:-translate-y-2 transition-all duration-300 group">
-              <div className="w-16 h-16 bg-yellow-50 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-yellow-400 transition-all duration-300">
-                <Lightbulb className="w-8 h-8 text-yellow-600 group-hover:text-white transition-colors" />
+            
+            <div className="bg-slate-900 p-8 rounded-3xl shadow-xl hover:-translate-y-1 transition-all group relative overflow-hidden">
+              <div className="absolute -right-10 -top-10 w-32 h-32 bg-yellow-500/20 rounded-full blur-2xl"></div>
+              <div className="w-14 h-14 bg-slate-800 rounded-2xl flex items-center justify-center text-yellow-500 mb-6">
+                <Lightbulb className="w-7 h-7" />
               </div>
-              <h3 className="text-2xl font-bold text-slate-800 mb-4">Créativité innovante</h3>
-              <p className="text-slate-500 leading-relaxed">
-                Nous repoussons les limites de la créativité pour vous offrir des contenus originaux, esthétiques et qui captent l'attention de votre audience.
-              </p>
+              <h3 className="text-xl font-bold text-white mb-3">{t('home.feat_2_title', "Créativité innovante")}</h3>
+              <p className="text-slate-400 leading-relaxed">{t('home.feat_2_desc', "Nous repoussons les limites de la créativité pour vous offrir des contenus originaux, esthétiques et qui captent l'attention de votre audience.")}</p>
             </div>
-            {/* Feature 3 */}
-            <div className="bg-white p-10 rounded-3xl shadow-sm border border-slate-100 hover:shadow-2xl hover:border-yellow-400 hover:-translate-y-2 transition-all duration-300 group">
-              <div className="w-16 h-16 bg-yellow-50 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-yellow-400 transition-all duration-300">
-                <Video className="w-8 h-8 text-yellow-600 group-hover:text-white transition-colors" />
+            
+            <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all group">
+              <div className="w-14 h-14 bg-yellow-50 rounded-2xl flex items-center justify-center text-yellow-600 mb-6 group-hover:bg-yellow-500 group-hover:text-white transition-colors">
+                <Video className="w-7 h-7" />
               </div>
-              <h3 className="text-2xl font-bold text-slate-800 mb-4">Qualité de production</h3>
-              <p className="text-slate-500 leading-relaxed">
-                De la captation d'image au montage final, nous utilisons des équipements professionnels pour un rendu audiovisuel d'excellence.
-              </p>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">{t('home.feat_3_title', "Qualité de production")}</h3>
+              <p className="text-slate-500 leading-relaxed">{t('home.feat_3_desc', "De la captation d'image au montage final, nous utilisons des équipements professionnels pour un rendu audiovisuel d'excellence.")}</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3. Services Preview (Bento Grid Style) */}
-      <section className="py-28 bg-white">
+      {/* 3. Nos Services (Aperçu) */}
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-            <div className="max-w-2xl">
-              <span className="text-yellow-600 font-bold tracking-widest uppercase text-sm mb-3 block">Nos Domaines d'Expertise</span>
-              <h2 className="text-4xl sm:text-5xl font-extrabold text-slate-900 leading-tight">
-                Solutions complètes pour votre <span className="text-gradient">communication</span>
+            <div>
+              <span className="text-yellow-600 font-bold tracking-widest uppercase text-sm mb-3 block">{t('home.serv_sub', "Nos Domaines d'Expertise")}</span>
+              <h2 className="text-4xl sm:text-5xl font-extrabold text-slate-900 max-w-2xl leading-tight">
+                {t('home.serv_title_1', "Solutions complètes pour votre")} <span className="text-gradient">{t('home.serv_title_2', "communication")}</span>
               </h2>
             </div>
-            <Link to="/services" className="inline-flex items-center gap-2 font-bold text-yellow-600 hover:text-yellow-500 transition-colors uppercase tracking-widest text-sm group">
-              Voir tous les services
+            <Link to="/services" className="inline-flex items-center gap-2 font-bold text-slate-900 hover:text-yellow-600 transition-colors uppercase tracking-widest text-sm group">
+              {t('home.serv_see_all', "Voir tous les services")}
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Card 1 - Large */}
-            <Link to="/services" className="lg:col-span-2 bg-slate-900 rounded-3xl p-10 relative overflow-hidden group hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-yellow-500/20 to-transparent rounded-full blur-2xl group-hover:scale-110 transition-transform duration-500"></div>
-              <div className="relative z-10 h-full flex flex-col justify-between">
-                <div className="w-14 h-14 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-16 text-yellow-500">
-                  <Video className="w-7 h-7" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Service 1 */}
+            <Link to="/services" className="group relative rounded-3xl overflow-hidden aspect-[4/5] shadow-lg">
+              <img src="https://images.unsplash.com/photo-1601506521937-0121a7fc2a6b?q=80&w=2071&auto=format&fit=crop" alt="Production Vidéo" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 p-8 w-full">
+                <div className="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center text-slate-900 mb-4 group-hover:-translate-y-2 transition-transform">
+                  <Video className="w-5 h-5" />
                 </div>
-                <div>
-                  <h3 className="text-3xl font-bold text-white mb-3">Production Audiovisuelle</h3>
-                  <p className="text-slate-400 text-lg max-w-md">Films institutionnels, spots publicitaires, clips et documentaires de qualité cinématographique.</p>
-                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">{t('home.serv_1_title', "Production Audiovisuelle")}</h3>
+                <p className="text-slate-300 line-clamp-2">{t('home.serv_1_desc', "Films institutionnels, spots publicitaires, clips et documentaires de qualité cinématographique.")}</p>
               </div>
             </Link>
-            
-            {/* Card 2 */}
-            <Link to="/services" className="bg-yellow-50 rounded-3xl p-10 border border-yellow-100 group hover:shadow-2xl hover:border-yellow-300 hover:-translate-y-1 transition-all duration-300">
-              <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-8 text-yellow-600 shadow-sm">
-                <Target className="w-7 h-7" />
+
+            {/* Service 2 */}
+            <Link to="/services" className="group relative rounded-3xl overflow-hidden aspect-[4/5] shadow-lg">
+              <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop" alt="Marketing Digital" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 p-8 w-full">
+                <div className="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center text-slate-900 mb-4 group-hover:-translate-y-2 transition-transform">
+                  <Share2 className="w-5 h-5" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">{t('home.serv_2_title', "Digital & Marketing")}</h3>
+                <p className="text-slate-300 line-clamp-2">{t('home.serv_2_desc', "Stratégie réseaux sociaux, publicité ciblée et gestion de communauté.")}</p>
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">Digital & Marketing</h3>
-              <p className="text-slate-600">Stratégie réseaux sociaux, publicité ciblée et gestion de communauté.</p>
             </Link>
             
             {/* List Card */}
-            <div className="bg-slate-50 rounded-3xl p-10 border border-slate-200 md:col-span-2 lg:col-span-3 flex flex-col md:flex-row items-center justify-between gap-10">
-              <div className="max-w-lg">
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">Et bien plus encore...</h3>
-                <p className="text-slate-500">Nous couvrons l'ensemble de vos besoins en communication visuelle et sonore pour une cohérence parfaite de votre marque.</p>
-              </div>
-              <div className="grid grid-cols-2 gap-x-12 gap-y-4 w-full md:w-auto">
-                <div className="flex items-center gap-3 text-slate-700 font-medium"><CheckCircle2 className="w-5 h-5 text-yellow-500" /> Photographie</div>
-                <div className="flex items-center gap-3 text-slate-700 font-medium"><CheckCircle2 className="w-5 h-5 text-yellow-500" /> Événementiel</div>
-                <div className="flex items-center gap-3 text-slate-700 font-medium"><CheckCircle2 className="w-5 h-5 text-yellow-500" /> Design Graphique</div>
-                <div className="flex items-center gap-3 text-slate-700 font-medium"><CheckCircle2 className="w-5 h-5 text-yellow-500" /> Podcasts</div>
-              </div>
+            <div className="bg-slate-50 rounded-3xl p-10 border border-slate-200 md:col-span-2 lg:col-span-1 flex flex-col items-start justify-center gap-6">
+              <h3 className="text-2xl font-bold text-slate-900">{t('home.serv_3_title', "Et bien plus encore...")}</h3>
+              <p className="text-slate-500 mb-4">{t('home.serv_3_desc', "Nous couvrons l'ensemble de vos besoins en communication visuelle et sonore pour une cohérence parfaite de votre marque.")}</p>
+              
+              <ul className="space-y-4 w-full">
+                <li className="flex items-center gap-3 text-slate-700 font-medium bg-white p-4 rounded-xl border border-slate-100 shadow-sm"><CheckCircle2 className="text-yellow-500 w-5 h-5" /> {t('home.serv_3_li_1', "Photographie")}</li>
+                <li className="flex items-center gap-3 text-slate-700 font-medium bg-white p-4 rounded-xl border border-slate-100 shadow-sm"><CheckCircle2 className="text-yellow-500 w-5 h-5" /> {t('home.serv_3_li_2', "Événementiel")}</li>
+                <li className="flex items-center gap-3 text-slate-700 font-medium bg-white p-4 rounded-xl border border-slate-100 shadow-sm"><CheckCircle2 className="text-yellow-500 w-5 h-5" /> {t('home.serv_3_li_3', "Design Graphique")}</li>
+                <li className="flex items-center gap-3 text-slate-700 font-medium bg-white p-4 rounded-xl border border-slate-100 shadow-sm"><CheckCircle2 className="text-yellow-500 w-5 h-5" /> {t('home.serv_3_li_4', "Podcasts")}</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 4. CTA Section */}
-      <section className="py-24 relative overflow-hidden">
-        {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvc3ZnPg==')]"></div>
+      {/* Partenaires */}
+      <PartnersTicker />
+
+      {/* Testimonials */}
+      <TestimonialsCarousel />
+
+      {/* CTA Section */}
+      <section className="py-24 relative overflow-hidden bg-slate-900 border-t-4 border-yellow-500">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.1)_0%,transparent_70%)]"></div>
+        <div className="absolute -left-20 top-0 w-72 h-72 bg-yellow-500/10 rounded-full blur-3xl"></div>
         
         <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
-          <h2 className="text-4xl sm:text-5xl font-extrabold text-white mb-6">
-            Prêt à donner vie à votre <span className="text-yellow-400">projet</span> ?
+          <h2 className="text-4xl sm:text-6xl font-extrabold text-white mb-6">
+            {t('home.cta_title_1', "Prêt à donner vie à votre")} <span className="text-yellow-500">{t('home.cta_title_2', "projet")}</span>{t('home.cta_title_3', "?")}
           </h2>
-          <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
-            Discutons de vos besoins et découvrez comment notre équipe peut vous aider à atteindre vos objectifs.
+          <p className="text-xl text-slate-400 mb-12 max-w-2xl mx-auto">
+            {t('home.cta_desc', "Discutons de vos besoins et découvrez comment notre équipe peut vous aider à atteindre vos objectifs.")}
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center justify-center gap-3 px-12 py-5 rounded-2xl bg-gradient-to-r from-yellow-400 to-yellow-600 text-slate-900 font-bold uppercase tracking-widest hover:shadow-xl hover:shadow-yellow-500/30 hover:-translate-y-1 transition-all"
+            className="inline-flex items-center gap-3 px-10 py-5 rounded-2xl bg-gradient-to-r from-yellow-400 to-yellow-600 text-slate-900 font-bold uppercase tracking-widest hover:shadow-xl hover:shadow-yellow-500/30 hover:-translate-y-1 transition-all"
           >
-            Contactez-nous aujourd'hui
+            {t('home.cta_btn', "Contactez-nous aujourd'hui")}
             <ArrowRight className="h-5 w-5" />
           </Link>
         </div>
