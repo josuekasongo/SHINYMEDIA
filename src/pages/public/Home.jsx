@@ -2,33 +2,100 @@ import { Play, ArrowRight, Video, Target, Lightbulb, CheckCircle2, Share2 } from
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Logo from '../../components/Logo';
+import { useState, useEffect } from 'react';
+
+const heroBgImages = [
+  {
+    url: 'https://images.unsplash.com/photo-1601506521937-0121a7fc2a6b?q=80&w=2071&auto=format&fit=crop',
+    label: 'Production Audiovisuelle'
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop',
+    label: 'Digital & Marketing'
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=2073&auto=format&fit=crop',
+    label: 'Photographie'
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&w=2070&auto=format&fit=crop',
+    label: 'Podcasts & Audio'
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop',
+    label: 'Couverture Médiatique'
+  },
+];
 
 export default function Home() {
   const { t } = useTranslation();
+  const [currentBg, setCurrentBg] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentBg((prev) => (prev + 1) % heroBgImages.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="bg-white">
-      {/* 1. Hero Section - Premium Design */}
-      <section className="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
-        {/* Glow Effects */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle,rgba(212,175,55,0.08)_0%,rgba(255,255,255,0)_70%)] rounded-full -z-10 blur-3xl animate-pulse"></div>
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-yellow-400/10 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-slate-900/5 rounded-full blur-3xl"></div>
+      {/* 1. Hero Section - Cinematic Background Slideshow */}
+      <section className="relative min-h-screen flex items-center justify-center text-center overflow-hidden bg-slate-900">
+        {/* Background Image Slideshow */}
+        {heroBgImages.map((img, idx) => (
+          <div
+            key={idx}
+            className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
+            style={{ opacity: idx === currentBg ? 1 : 0 }}
+          >
+            <img
+              src={img.url}
+              alt={img.label}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        ))}
 
-        <div className="max-w-5xl mx-auto px-6 relative z-10 flex flex-col items-center mt-20">
+        {/* Dark gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/60 to-slate-900/90 z-10"></div>
+
+        {/* Slide indicator dots */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+          {heroBgImages.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setCurrentBg(idx)}
+              className={`rounded-full transition-all duration-300 ${
+                idx === currentBg
+                  ? 'w-8 h-2 bg-yellow-500'
+                  : 'w-2 h-2 bg-white/40 hover:bg-white/70'
+              }`}
+            />
+          ))}
+        </div>
+
+        {/* Current service label */}
+        <div className="absolute bottom-16 right-6 z-20">
+          <span className="text-xs font-bold tracking-widest uppercase text-yellow-400/80 bg-black/20 backdrop-blur-sm px-3 py-1 rounded-full border border-yellow-500/20">
+            {heroBgImages[currentBg].label}
+          </span>
+        </div>
+
+        <div className="max-w-5xl mx-auto px-6 relative z-20 flex flex-col items-center mt-20">
           <div className="animate-fade-in-up" style={{ animationDuration: '1s' }}>
-            <Logo className="h-40 sm:h-56 w-auto mb-10 text-slate-900 drop-shadow-xl" />
+            <Logo className="h-40 sm:h-56 w-auto mb-10 text-white drop-shadow-2xl" />
           </div>
           
-          <h1 className="text-5xl sm:text-7xl tracking-tight mb-6 font-extrabold text-slate-900 animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
+          <h1 className="text-5xl sm:text-7xl tracking-tight mb-6 font-extrabold text-white drop-shadow-lg animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
             {t('home.hero_title_1')} <span className="text-gradient">{t('home.hero_title_2')}</span>
           </h1>
           
-          <p className="text-lg sm:text-xl text-slate-500 mb-10 max-w-3xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
+          <p className="text-lg sm:text-xl text-slate-200/90 mb-10 max-w-3xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
             {t('home.hero_desc')}
           </p>
           
-          <p className="text-sm sm:text-base font-bold tracking-[0.3em] uppercase text-yellow-600 mb-14 animate-fade-in-up" style={{ animationDelay: '0.6s', animationFillMode: 'both' }}>
+          <p className="text-sm sm:text-base font-bold tracking-[0.3em] uppercase text-yellow-400 mb-14 animate-fade-in-up" style={{ animationDelay: '0.6s', animationFillMode: 'both' }}>
             {t('home.hero_quote')}
           </p>
           
@@ -42,7 +109,7 @@ export default function Home() {
             </Link>
             <Link
               to="/contact"
-              className="flex items-center justify-center gap-3 px-10 py-5 rounded-2xl bg-white border-2 border-slate-200 text-slate-700 font-bold uppercase tracking-widest hover:border-yellow-500 hover:text-yellow-600 hover:-translate-y-1 hover:shadow-lg transition-all group"
+              className="flex items-center justify-center gap-3 px-10 py-5 rounded-2xl bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white font-bold uppercase tracking-widest hover:border-yellow-500 hover:bg-yellow-500/20 hover:-translate-y-1 hover:shadow-lg transition-all group"
             >
               {t('home.btn_contact', "Démarrer un projet")}
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
