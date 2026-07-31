@@ -38,13 +38,13 @@ export default function Home() {
               className="flex items-center justify-center gap-3 px-10 py-5 rounded-2xl bg-slate-900 text-white font-bold uppercase tracking-widest shadow-xl shadow-slate-900/20 hover:shadow-slate-900/40 hover:-translate-y-1 hover:bg-slate-800 transition-all"
             >
               <Play className="h-5 w-5 fill-current text-yellow-500" />
-              Découvrir nos services
+              {t('home.btn_services', "Découvrir nos services")}
             </Link>
             <Link
               to="/contact"
               className="flex items-center justify-center gap-3 px-10 py-5 rounded-2xl bg-white border-2 border-slate-200 text-slate-700 font-bold uppercase tracking-widest hover:border-yellow-500 hover:text-yellow-600 hover:-translate-y-1 hover:shadow-lg transition-all group"
             >
-              Démarrer un projet
+              {t('home.btn_contact', "Démarrer un projet")}
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
