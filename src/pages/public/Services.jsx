@@ -101,16 +101,16 @@ export default function Services() {
               <div className="w-24 h-24 mx-auto bg-yellow-500 rounded-full border-4 border-white shadow-xl shadow-yellow-500/30 flex items-center justify-center mb-6 text-white">
                 <Wand2 className="w-10 h-10" />
               </div>
-              <h3 className="text-xl font-bold text-slate-800 mb-3">2. Création & Production</h3>
-              <p className="text-slate-500 leading-relaxed">Notre équipe d'experts donne vie à vos idées grâce à des équipements professionnels et une créativité sans limite.</p>
+              <h3 className="text-xl font-bold text-slate-800 mb-3">{t('services.meth_2_title', "2. Création & Production")}</h3>
+              <p className="text-slate-500 leading-relaxed">{t('services.meth_2_desc', "Notre équipe d'experts donne vie à vos idées grâce à des équipements professionnels et une créativité sans limite.")}</p>
             </div>
             
             <div className="relative bg-white z-10 text-center px-6">
               <div className="w-24 h-24 mx-auto bg-slate-900 rounded-full border-4 border-white shadow-xl shadow-slate-900/20 flex items-center justify-center mb-6 text-yellow-400">
                 <Rocket className="w-10 h-10" />
               </div>
-              <h3 className="text-xl font-bold text-slate-800 mb-3">3. Déploiement & Impact</h3>
-              <p className="text-slate-500 leading-relaxed">Nous diffusons vos contenus sur les canaux adaptés et mesurons les résultats pour maximiser votre retour sur investissement.</p>
+              <h3 className="text-xl font-bold text-slate-800 mb-3">{t('services.meth_3_title', "3. Déploiement & Impact")}</h3>
+              <p className="text-slate-500 leading-relaxed">{t('services.meth_3_desc', "Nous diffusons vos contenus sur les canaux adaptés et mesurons les résultats pour maximiser votre retour sur investissement.")}</p>
             </div>
           </div>
         </div>
@@ -120,8 +120,8 @@ export default function Services() {
       <section className="py-28 bg-slate-50 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-4xl font-extrabold text-slate-900 mb-4">Catalogue des <span className="text-gradient">Services</span></h2>
-            <p className="text-slate-500 text-lg max-w-2xl mx-auto">Découvrez en détail ce que SHINY MÉDIA peut accomplir pour vous.</p>
+            <h2 className="text-4xl font-extrabold text-slate-900 mb-4">{t('services.cat_title_1', "Catalogue des")} <span className="text-gradient">{t('services.cat_title_2', "Services")}</span></h2>
+            <p className="text-slate-500 text-lg max-w-2xl mx-auto">{t('services.cat_desc', "Découvrez en détail ce que SHINY MÉDIA peut accomplir pour vous.")}</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -169,17 +169,17 @@ export default function Services() {
             <MessageSquare className="w-10 h-10 text-yellow-500" />
           </div>
           <h2 className="text-4xl sm:text-5xl font-extrabold text-white mb-6">
-            Prêt à lancer votre <span className="text-yellow-400">projet</span> ?
+            {t('services.cta_title_1', "Prêt à lancer votre")} <span className="text-yellow-400">{t('services.cta_title_2', "projet")}</span>{t('services.cta_title_3', "?")}
           </h2>
           <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Contactez-nous dès aujourd'hui. Notre équipe est à votre écoute pour transformer vos idées en réalisations concrètes et impactantes.
+            {t('services.cta_desc', "Contactez-nous dès aujourd'hui. Notre équipe est à votre écoute pour transformer vos idées en réalisations concrètes et impactantes.")}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
               to="/contact"
               className="inline-flex items-center justify-center gap-3 px-10 py-4 rounded-2xl bg-gradient-to-r from-yellow-400 to-yellow-600 text-slate-900 font-bold uppercase tracking-widest hover:shadow-xl hover:shadow-yellow-500/30 hover:-translate-y-1 transition-all"
             >
-              Obtenir un devis gratuit
+              {t('services.cta_btn', "Obtenir un devis gratuit")}
               <ArrowRight className="h-5 w-5" />
             </Link>
           </div>
