@@ -1,26 +1,48 @@
+import { useState } from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
-import { Facebook, Instagram, Twitter, Youtube, ChevronRight, MapPin, Phone, Mail } from 'lucide-react';
+import { Facebook, Instagram, Twitter, Youtube, ChevronRight, MapPin, Phone, Mail, Menu, X } from 'lucide-react';
 import Logo from '../components/Logo';
 
 function PublicLayout() {
   const location = useLocation();
   const isActive = (path) => location.pathname === path;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}
-      <header className="glass fixed w-full top-0 z-50 py-2">
+      <header className="glass fixed w-full top-0 z-50 py-3">
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-          <Link to="/" className="flex items-center gap-2">
-            <Logo className="h-16 w-auto text-slate-900" />
+          <Link to="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+            <Logo className="h-12 sm:h-16 w-auto text-slate-900" />
           </Link>
-          <nav className="flex gap-8 font-medium text-slate-700">
+          
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex gap-8 font-medium text-slate-700">
             <Link to="/" className={`hover:text-yellow-600 transition-colors ${isActive('/') ? 'text-yellow-600 font-bold' : ''}`}>Accueil</Link>
             <Link to="/services" className={`hover:text-yellow-600 transition-colors ${isActive('/services') ? 'text-yellow-600 font-bold' : ''}`}>Services</Link>
             <Link to="/apropos" className={`hover:text-yellow-600 transition-colors ${isActive('/apropos') ? 'text-yellow-600 font-bold' : ''}`}>À propos</Link>
             <Link to="/contact" className={`hover:text-yellow-600 transition-colors ${isActive('/contact') ? 'text-yellow-600 font-bold' : ''}`}>Contact</Link>
           </nav>
+
+          {/* Mobile Menu Button */}
+          <button 
+            className="md:hidden p-2 text-slate-700 hover:text-yellow-600 focus:outline-none"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
+          </button>
         </div>
+
+        {/* Mobile Nav */}
+        {isMobileMenuOpen && (
+          <nav className="md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-xl py-4 px-6 flex flex-col gap-4 font-medium text-slate-700">
+            <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className={`block py-2 ${isActive('/') ? 'text-yellow-600 font-bold' : ''}`}>Accueil</Link>
+            <Link to="/services" onClick={() => setIsMobileMenuOpen(false)} className={`block py-2 ${isActive('/services') ? 'text-yellow-600 font-bold' : ''}`}>Services</Link>
+            <Link to="/apropos" onClick={() => setIsMobileMenuOpen(false)} className={`block py-2 ${isActive('/apropos') ? 'text-yellow-600 font-bold' : ''}`}>À propos</Link>
+            <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)} className={`block py-2 ${isActive('/contact') ? 'text-yellow-600 font-bold' : ''}`}>Contact</Link>
+          </nav>
+        )}
       </header>
       
       <main className="flex-grow pt-24">
