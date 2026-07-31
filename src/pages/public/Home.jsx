@@ -2,6 +2,8 @@ import { Play, ArrowRight, Video, Target, Lightbulb, CheckCircle2, Share2 } from
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Logo from '../../components/Logo';
+import PartnersTicker from '../../components/PartnersTicker';
+import TestimonialsCarousel from '../../components/TestimonialsCarousel';
 
 export default function Home() {
   const { t } = useTranslation();
