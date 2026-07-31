@@ -1,0 +1,52 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "about": "Nosotros",
+    "contact": "Contacto"
+  },
+  "footer": {
+    "desc": "Agencia de comunicación y producción multimedia dedicada a la información, la creación de contenidos y la promoción de talentos.",
+    "quick_links": "Enlaces Rápidos",
+    "contact_us": "Contáctenos",
+    "rights": "Todos los derechos reservados.",
+    "slogan": "INFORMAR • INSPIRAR • IMPACTAR"
+  },
+  "home": {
+    "hero_title_1": "Excelencia en",
+    "hero_title_2": "Creación Multimedia",
+    "hero_desc": "Bienvenido a SHINY MÉDIA. Nuestro compromiso es producir contenido profesional que informe, inspire y destaque los talentos para un impacto duradero.",
+    "hero_quote": "« Iluminando talentos, inspirando el futuro. »",
+    "btn_services": "Descubra nuestros servicios",
+    "btn_contact": "Iniciar un proyecto",
+    "why_us_sub": "El Enfoque Shiny",
+    "why_us_title_1": "Por qué",
+    "why_us_title_2": "elegirnos",
+    "why_us_qmark": "?",
+    "feat_1_title": "Estrategia a medida",
+    "feat_1_desc": "Cada proyecto es único. Diseñamos estrategias personalizadas para alcanzar sus objetivos con precisión y maximizar su impacto.",
+    "feat_2_title": "Creatividad innovadora",
+    "feat_2_desc": "Superamos los límites de la creatividad para ofrecerle contenido original, estético y que capte la atención de su audiencia.",
+    "feat_3_title": "Calidad de producción",
+    "feat_3_desc": "Desde la captura de imagen hasta el montaje final, utilizamos equipos profesionales para obtener un resultado audiovisual sobresaliente.",
+    "serv_sub": "Nuestras Áreas de Especialización",
+    "serv_title_1": "Soluciones completas para su",
+    "serv_title_2": "comunicación",
+    "serv_see_all": "Ver todos los servicios",
+    "serv_1_title": "Producción Audiovisual",
+    "serv_1_desc": "Películas corporativas, comerciales, videos musicales y documentales de calidad cinematográfica.",
+    "serv_2_title": "Digital y Marketing",
+    "serv_2_desc": "Estrategia en redes sociales, publicidad dirigida y gestión comunitaria.",
+    "serv_3_title": "Y mucho más...",
+    "serv_3_desc": "Cubrimos todas sus necesidades de comunicación visual y sonora para una consistencia perfecta de su marca.",
+    "serv_3_li_1": "Fotografía",
+    "serv_3_li_2": "Eventos",
+    "serv_3_li_3": "Diseño Gráfico",
+    "serv_3_li_4": "Podcasts",
+    "cta_title_1": "¿Listo para dar vida a su",
+    "cta_title_2": "proyecto",
+    "cta_title_3": "?",
+    "cta_desc": "Discutamos sus necesidades y descubra cómo nuestro equipo puede ayudarle a alcanzar sus objetivos.",
+    "cta_btn": "Contáctenos hoy"
+  }
+}

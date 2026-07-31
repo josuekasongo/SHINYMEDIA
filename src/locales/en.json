@@ -1,0 +1,52 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About Us",
+    "contact": "Contact"
+  },
+  "footer": {
+    "desc": "Communication and multimedia production agency dedicated to information, content creation, and promoting talents.",
+    "quick_links": "Quick Links",
+    "contact_us": "Contact Us",
+    "rights": "All rights reserved.",
+    "slogan": "INFORM • INSPIRE • IMPACT"
+  },
+  "home": {
+    "hero_title_1": "Excellence in",
+    "hero_title_2": "Multimedia Creation",
+    "hero_desc": "Welcome to SHINY MÉDIA. Our commitment is to produce professional content that informs, inspires, and highlights talents for a lasting impact.",
+    "hero_quote": "« Enlightening talents, inspiring the future. »",
+    "btn_services": "Discover our services",
+    "btn_contact": "Start a project",
+    "why_us_sub": "The Shiny Approach",
+    "why_us_title_1": "Why choose",
+    "why_us_title_2": "us",
+    "why_us_qmark": "?",
+    "feat_1_title": "Tailored Strategy",
+    "feat_1_desc": "Every project is unique. We design personalized strategies to achieve your goals accurately and maximize your impact.",
+    "feat_2_title": "Innovative Creativity",
+    "feat_2_desc": "We push the boundaries of creativity to offer you original, aesthetic content that captures your audience's attention.",
+    "feat_3_title": "Production Quality",
+    "feat_3_desc": "From image capture to final editing, we use professional equipment for outstanding audiovisual results.",
+    "serv_sub": "Our Areas of Expertise",
+    "serv_title_1": "Complete solutions for your",
+    "serv_title_2": "communication",
+    "serv_see_all": "See all services",
+    "serv_1_title": "Audiovisual Production",
+    "serv_1_desc": "Corporate films, commercials, music videos, and cinematic quality documentaries.",
+    "serv_2_title": "Digital & Marketing",
+    "serv_2_desc": "Social media strategy, targeted advertising, and community management.",
+    "serv_3_title": "And much more...",
+    "serv_3_desc": "We cover all your visual and audio communication needs for a perfect consistency of your brand.",
+    "serv_3_li_1": "Photography",
+    "serv_3_li_2": "Events",
+    "serv_3_li_3": "Graphic Design",
+    "serv_3_li_4": "Podcasts",
+    "cta_title_1": "Ready to bring your",
+    "cta_title_2": "project",
+    "cta_title_3": "to life?",
+    "cta_desc": "Let's discuss your needs and discover how our team can help you achieve your goals.",
+    "cta_btn": "Contact us today"
+  }
+}

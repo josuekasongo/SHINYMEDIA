@@ -1,8 +1,11 @@
 import { Play, ArrowRight, Video, Target, Lightbulb, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Logo from '../../components/Logo';
 
 export default function Home() {
+  const { t } = useTranslation();
+
   return (
     <div className="bg-white">
       {/* 1. Hero Section - Premium Design */}
@@ -18,15 +21,15 @@ export default function Home() {
           </div>
           
           <h1 className="text-5xl sm:text-7xl tracking-tight mb-6 font-extrabold text-slate-900 animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
-            L'Excellence en <span className="text-gradient">Création Multimédia</span>
+            {t('home.hero_title_1')} <span className="text-gradient">{t('home.hero_title_2')}</span>
           </h1>
           
           <p className="text-lg sm:text-xl text-slate-500 mb-10 max-w-3xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
-            Bienvenue sur SHINY MÉDIA. Notre engagement est de produire des contenus professionnels qui informent, inspirent et valorisent les talents pour un impact durable.
+            {t('home.hero_desc')}
           </p>
           
           <p className="text-sm sm:text-base font-bold tracking-[0.3em] uppercase text-yellow-600 mb-14 animate-fade-in-up" style={{ animationDelay: '0.6s', animationFillMode: 'both' }}>
-            « Éclairer les talents, inspirer l'avenir. »
+            {t('home.hero_quote')}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto animate-fade-in-up" style={{ animationDelay: '0.8s', animationFillMode: 'both' }}>
